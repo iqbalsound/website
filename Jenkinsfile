@@ -32,7 +32,7 @@ pipeline {
                             sshTransfer(
                                 sourceFiles: '**/*',
                                 removePrefix: '',
-                                remoteDirectory: '/var/www/html',
+                                remoteDirectory: '/usr/share/nginx/html',
                                 execCommand: 'sudo systemctl restart nginx'
                             )
                         ],
