@@ -33,7 +33,7 @@ pipeline {
                                 sourceFiles: '**/*',
                                 removePrefix: '',
                                 remoteDirectory: '/usr/share/nginx/html',
-                                execCommand: 'sudo systemctl restart nginx'
+                                execCommand: 'rsync -a . jenkins@100.0.0.102:/usr/share/nginx/html'
                             )
                         ],
                         usePromotionTimestamp: false,
